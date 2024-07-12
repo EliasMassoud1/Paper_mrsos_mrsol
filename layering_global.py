@@ -60,8 +60,8 @@ fig, axs = plt.subplots(1, 3, figsize=(18, 6))
 
 # Plot mrsos in the first subplot
 long_term_mean_mrsos["mrsos"].plot(
-    ax=axs[0]
-)  # , vmax=vmax_plot)  # Selecting the DataArray before plotting
+    ax=axs[0], vmax=vmax_plot
+)  # Selecting the DataArray before plotting
 axs[0].set_title("Long-term Mean mrsos")
 axs[0].set_xlabel("Longitude")
 axs[0].set_ylabel("Latitude")
@@ -73,9 +73,7 @@ axs[1].set_xlabel("Longitude")
 axs[1].set_ylabel("Latitude")
 
 # Plot the difference in the third subplot
-difference.plot(
-    ax=axs[2]
-)  # , cmap="RdBu", center=0 )  # , vmin=-5, vmax=5, cmap="RdBu", center=0)
+difference.plot(ax=axs[2], cmap="RdBu", center=0, vmin=-5, vmax=5)
 axs[2].set_title("Difference (mrsos - mrsol)")
 axs[2].set_xlabel("Longitude")
 axs[2].set_ylabel("Latitude")
